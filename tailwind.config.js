@@ -23,6 +23,9 @@ module.exports = {
         gleam: "#f8e08e",
         bright: "#fafaf0",
       },
+      maxWidth: {
+        custom: "1100px",
+      },
     },
   },
   plugins: [],
