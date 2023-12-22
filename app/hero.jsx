@@ -1,36 +1,50 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import Image from "next/image";
-import { ChevronRightIcon, ArrowRightIcon } from "@radix-ui/react-icons";
-import { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import {
+  ChevronRightIcon,
+  ArrowRightIcon,
+  RocketIcon,
+  InfoCircledIcon,
+} from "@radix-ui/react-icons";
+import { useState, useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
 export default function Hero() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const [isHovered, setIsHovered] = useState(false);
   const [isCaseStudyHovered, setIsCaseStudyHovered] = useState(false);
   return (
-    <main className="mt-20 grid grid-cols-12 gap-8">
-      <div className="md:col-span-7 col-span-12 space-y-6">
+    <main className="mt-20 grid md:grid-cols-12 grid-cols-6 gap-8">
+      <div
+        data-aos="fade-down"
+        data-aos-duration="1500"
+        className="xl:col-span-7 md:col-span-6 col-span-6  space-y-6"
+      >
         <div className="flex items-center gap-2">
-          <svg
-            className="animate-ping"
-            xmlns="http://www.w3.org/2000/svg"
-            width="8"
-            height="8"
-            viewBox="0 0 16 18"
-            fill="none"
-          >
-            <ellipse cx="8" cy="9.00001" rx="8" ry="8.27586" fill="#F9E08E" />
-            <ellipse
-              cx="8"
-              cy="9.00002"
-              rx="5.6092"
-              ry="5.88506"
-              fill="#FF9201"
-            />
-          </svg>
-          <h2 className="text-sm font-medium">Available for new project</h2>
+          <RocketIcon className=" text-shine " />
+
+          <TypeAnimation
+            sequence={[
+              // Same substring at the start will only be typed out once, initially
+              "Available for new project",
+              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              "Available for new opportunity",
+              1000,
+              "Available for new opportunity — let's jam!",
+              1000,
+            ]}
+            wrapper="h2"
+            speed={50}
+            className="text-sm"
+            repeat={0}
+          />
         </div>
         <div className="space-y-2">
-          <h1 className="md:text-6xl text-5xl tracking-tighter">
+          <h1 className="md:text-6xl text-4xl tracking-tighter">
             Web Designer with 3+ years of experience.
           </h1>
           <p className="text-gray-400 text-lg">
@@ -58,15 +72,17 @@ export default function Hero() {
           </a>
         </div>
       </div>
-      <div className=" md:col-start-10 col-span-12 md:col-span-5">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        className="justify-between md:col-span-5 xl:col-start-9 md:col-start-8 col-span-6  "
+      >
         <Image
-          className="hover:animate-pulse  transition-all"
+          className="  "
+          width={350}
+          height={300}
           src="/hero-section-image.png"
-          width={340}
-          height={340}
-          style={{ objectFit: "cover" }}
-          fill={false}
-          alt="Fasha Fadillah"
+          alt="Fasha"
         />
       </div>
     </main>
