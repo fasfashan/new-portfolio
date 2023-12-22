@@ -19,7 +19,7 @@ export default function Navbar() {
   ];
   return (
     <nav>
-      <div className="flex items-center justify-between max-w-custom m-auto py-3">
+      <div className="flex items-center justify-between  py-3">
         <svg
           width="40"
           height="40"
