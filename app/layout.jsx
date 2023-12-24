@@ -13,7 +13,9 @@ export const metadata = {
     url: "https://new-portfolio-ten-silk.vercel.app/",
     title: "Fasha Fadillah Portfolio's",
     description: "This is my personal website which contains some of my work",
-    image: ["/og_image.jpg"],
+    image: "/og_image.jpg",
+    site: "@fasfashan",
+    creator: "@fasfashan",
   },
   openGraph: {
     title: "Fasha Fadillah Portfolio's",
