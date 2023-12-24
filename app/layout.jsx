@@ -1,5 +1,5 @@
 import { DM_Sans } from "next/font/google";
-
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Head from "next/head";
 const dm_sans = DM_Sans({ subsets: ["latin"] });
@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
