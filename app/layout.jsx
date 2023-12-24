@@ -5,21 +5,28 @@ import Head from "next/head";
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 import Navbar from "./navbar";
 export const metadata = {
+  metadataBase: "https://new-portfolio-ten-silk.vercel.app",
   title: "Fasha Fadillah Portfolio's",
   description: "This is my personal website which contains some of my work",
   twitter: {
     card: "summary_large_image",
+    url: "https://new-portfolio-ten-silk.vercel.app/",
     title: "Fasha Fadillah Portfolio's",
     description: "This is my personal website which contains some of my work",
-    creator: "@fasfashan",
+    images: ["/og_image.jpg"],
+  },
+  openGraph: {
+    title: "Fasha Fadillah Portfolio's",
+    description: "This is my personal website which contains some of my work",
+    url: "https://muhamadfasha.xyz",
+    siteName: "Fasha Fadillah",
     images: [
       {
         url: "/og_image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Og Image",
       },
     ],
+    locale: "en_ID",
+    type: "website",
   },
 };
 
