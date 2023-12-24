@@ -37,6 +37,7 @@ export default function CaseStudy() {
         <Image
           className="col-span-12 mt-20 w-full"
           width={2000}
+          alt="Niagahoster"
           height={1000}
           maxWidth="100"
           src="/Niagahoster.png"
@@ -73,7 +74,7 @@ export default function CaseStudy() {
           alt="ProWork"
         />
       </div>
-      <div className="grid-cols-12 grid mt-40 mb-20">
+      <div className="grid-cols-12 grid mt-40 ">
         <div className=" flex flex-wrap gap-8 col-span-12 justify-between ">
           <div className="space-y-2">
             {" "}
