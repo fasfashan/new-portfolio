@@ -6,39 +6,20 @@ const dm_sans = DM_Sans({ subsets: ["latin"] });
 import Navbar from "./navbar";
 export const metadata = {
   title: "Fasha Fadillah Portfolio's",
-  description: "My portfolio's",
+  description: "This is my personal website which contains some of my work",
   twitter: {
     card: "summary_large_image",
     title: "Fasha Fadillah Portfolio's",
     description: "This is my personal website which contains some of my work",
+    creator: "@fasfashan",
     images: [
       {
         url: "/og_image.jpg",
         width: 1200,
         height: 630,
-      },
-    ],
-  },
-  openGraph: {
-    title: "Fasha Fadillah Portfolio's",
-    description: "This is my personal website which contains some of my work",
-    url: "muhamadfasha.xyz",
-    siteName: "Fasha Fadillah Portfolio's",
-    images: [
-      {
-        url: "/og_image.jpg",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: "/og_image.jpg",
-        width: 1200,
-        height: 600,
         alt: "Og Image",
       },
     ],
-    locale: "en_ID",
-    type: "website",
   },
 };
 
