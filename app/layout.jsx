@@ -13,12 +13,12 @@ export const metadata = {
     url: "https://new-portfolio-ten-silk.vercel.app/",
     title: "Fasha Fadillah Portfolio's",
     description: "This is my personal website which contains some of my work",
-    images: ["/og_image.jpg"],
+    image: ["/og_image.jpg"],
   },
   openGraph: {
     title: "Fasha Fadillah Portfolio's",
     description: "This is my personal website which contains some of my work",
-    url: "https://muhamadfasha.xyz",
+    url: "https://www.muhamadfasha.xyz",
     siteName: "Fasha Fadillah",
     images: [
       {
