@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Gallery() {
   return (
     <>
-      <div className="grid md:grid-cols-4 xl:grid-cols-3 gap-5 mt-20 mb-20">
+      <div className="grid md:grid-cols-4 xl:grid-cols-3 gap-5 mt-20 ">
         <div className=" p-8 bg-bright ">
           <Image
             className="m-auto hover:scale-95 transition-all"
