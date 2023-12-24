@@ -46,7 +46,7 @@ export default function Navbar() {
             </linearGradient>
           </defs>
         </svg>
-        <ul className="flex items-center md:gap-10 gap-6 text-sm">
+        <ul className="flex items-center md:gap-8 gap-6 text-sm">
           {menuItems.map((item, index) => (
             <li key={index}>
               <a
