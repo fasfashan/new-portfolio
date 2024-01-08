@@ -18,7 +18,7 @@ export default function Page() {
           alt="Design Challenge"
           src="/design-exploration.png"
         />
-        <p className="text-xl md:w-2/4   text-neutral-600 ">
+        <p className="md:text-xl text-md md:w-2/4  mt-6  text-neutral-600 ">
           I like to explore design. Seeing designs that have unique layouts adds
           to my inspiration in designing.
         </p>

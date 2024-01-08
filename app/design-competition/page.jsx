@@ -18,7 +18,7 @@ export default function Page() {
           alt="Design Challenge"
           src="/design-competition.png"
         />
-        <p className="text-xl md:w-2/4   text-neutral-600 ">
+        <p className="md:text-xl text-md  md:w-2/4 mt-6  text-neutral-600 ">
           On various occasions, I often take part in design competitions that I
           find on the internet. Apart from earning money (lol), participating in
           competitions certainly trains me in various things in terms of design

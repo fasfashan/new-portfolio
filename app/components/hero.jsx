@@ -67,7 +67,7 @@ export default function Hero() {
                 ]}
                 wrapper="h2"
                 speed={20}
-                className="text-sm text-black tracking-normal"
+                className="md:text-sm text-xs text-black tracking-normal"
                 repeat={Infinity}
                 deletionSpeed={50}
               />
@@ -165,7 +165,8 @@ export default function Hero() {
                 </clipPath>
               </defs>
             </svg>
-
+          </div>
+          <div className="flex gap-4 ">
             <svg
               className="hover:scale-90 transition-all"
               xmlns="http://www.w3.org/2000/svg"
@@ -192,9 +193,6 @@ export default function Hero() {
                 fill="#FF9A00"
               />
             </svg>
-          </div>
-
-          <div className="flex gap-4 ">
             <svg
               className="hover:scale-90 transition-all"
               width="60"
@@ -225,6 +223,8 @@ export default function Hero() {
                 fill="white"
               />
             </svg>
+          </div>
+          <div className="flex gap-4 ">
             <svg
               className="hover:scale-90 transition-all"
               width="60"
@@ -271,7 +271,6 @@ export default function Hero() {
                 fill="white"
               />
             </svg>
-
             <svg
               className="hover:scale-90 transition-all"
               width="60"
