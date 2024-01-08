@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="bg-slate-100 min-h-full space-y-6 p-8 rounded-2xl hover:shadow-inner transition-all">
           <div className="flex   justify-between  flex-wrap">
             <Image alt="Avatar" src="/ava.png" height={40} width={40} />
-            <span className="text-sm  select-none font-medium py-0 px-2 bg-slate-200 h-fit rounded-md text-black border border-slate-700 ">
+            <span className="text-xs  select-none font-medium py-0 px-2 bg-slate-200 h-fit rounded-md text-black border border-slate-700 ">
               About
             </span>
           </div>
@@ -78,7 +78,7 @@ export default function Hero() {
       <div className="xl:col-span-3 md:col-span-6 col-span-6   ">
         <div className="bg-slate-100 min-h-full flex flex-col  space-y-6 p-8 rounded-2xl hover:shadow-inner transition-all">
           <div className="flex   justify-between items-center flex-wrap">
-            <span className="text-sm py-0  select-none px-2 font-medium bg-slate-200 rounded-md text-black border border-slate-700 ">
+            <span className="text-xs py-0  select-none px-2 font-medium bg-slate-200 rounded-md text-black border border-slate-700 ">
               Interest
             </span>
           </div>
@@ -95,7 +95,7 @@ export default function Hero() {
       <div className="xl:col-span-3 md:col-span-6 col-span-6   ">
         <div className="bg-slate-100 min-h-full flex flex-col  space-y-6 p-8 rounded-2xl hover:shadow-inner transition-all">
           <div className="flex   justify-between items-center flex-wrap">
-            <span className="text-sm py-0 px-2 select-none font-medium bg-slate-200 rounded-md text-black border border-slate-700 ">
+            <span className="text-xs py-0 px-2 select-none font-medium bg-slate-200 rounded-md text-black border border-slate-700 ">
               Design Stack
             </span>
           </div>
