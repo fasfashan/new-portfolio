@@ -1,6 +1,12 @@
+"use client";
 import Image from "next/image";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useState, useEffect } from "react";
 export default function Gallery() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <div className="grid md:grid-cols-12 xl:grid-cols-12 gap-5 mt-20 ">

@@ -1,9 +1,10 @@
-import { DM_Sans } from "next/font/google";
+import { Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Head from "next/head";
-const dm_sans = DM_Sans({ subsets: ["latin"] });
-import Navbar from "./navbar";
+const manrope = Manrope({ subsets: ["latin"] });
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 export const metadata = {
   metadataBase: "https://new-portfolio-ten-silk.vercel.app",
   title: "Fasha Fadillah Portfolio's",
@@ -36,11 +37,11 @@ export default function RootLayout({ children }) {
   return (
     <html className="scroll-smooth" lang="en">
       <body
-        className={`${dm_sans.className} max-w-custom m-auto px-4 md:px-8 xl:px-0`}
+        className={`${manrope.className} max-w-6xl m-auto px-4 md:px-8 xl:px-0`}
       >
-        <Navbar />
         {children}
         <Analytics />
+        <Footer />
       </body>
     </html>
   );

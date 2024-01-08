@@ -12,6 +12,9 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        title: "Playfair Display",
+      },
       colors: {
         twilight: "#0F2021",
         dusk: "#0F3538",
@@ -25,6 +28,9 @@ module.exports = {
       },
       maxWidth: {
         custom: "1100px",
+      },
+      animation: {
+        bounceonce: "bounce 2s ease-in-out ",
       },
     },
   },
