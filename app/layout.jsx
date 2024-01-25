@@ -1,8 +1,8 @@
-import { Manrope } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Head from "next/head";
-const manrope = Manrope({ subsets: ["latin"] });
+const font = Plus_Jakarta_Sans({ subsets: ["latin"] });
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 export const metadata = {
@@ -37,8 +37,9 @@ export default function RootLayout({ children }) {
   return (
     <html className="scroll-smooth" lang="en">
       <body
-        className={`${manrope.className} max-w-6xl m-auto px-4 md:px-8 xl:px-0`}
+        className={`${font.className} bg-bright max-w-6xl m-auto px-4 py-4 md:px-8 xl:px-0 scroll-smooth`}
       >
+        <Navbar />
         {children}
         <Analytics />
         <Footer />

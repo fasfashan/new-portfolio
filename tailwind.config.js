@@ -21,10 +21,10 @@ module.exports = {
         cloud: "#496767",
         fog: "#87a19e",
         radiance: "#ff6600",
-        warmth: "#ff9200",
+        warmth: "#ED6B2E",
         shine: "#ffbe00",
         gleam: "#f8e08e",
-        bright: "#fafaf0",
+        bright: "#F4F0E6",
       },
       maxWidth: {
         custom: "1100px",
