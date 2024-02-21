@@ -1,7 +1,7 @@
 const data = [
   {
     project_name: "Smarttouch Web Design",
-    image: "/smarttouch.png",
+    image: "/smarttouch_4.png",
     link: "/projects/smart-touch",
     alt: "luxury hotel",
   },
