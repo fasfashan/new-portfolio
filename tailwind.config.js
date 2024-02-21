@@ -13,9 +13,10 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        title: "Playfair Display",
+        subtitle: "Noto Serif",
       },
       colors: {
+        primary: "#DBFD00",
         twilight: "#0F2021",
         dusk: "#0F3538",
         cloud: "#496767",

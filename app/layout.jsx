@@ -1,8 +1,8 @@
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Head from "next/head";
-const font = Plus_Jakarta_Sans({ subsets: ["latin"] });
+const font = Inter({ subsets: ["latin"] });
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 export const metadata = {
@@ -37,12 +37,11 @@ export default function RootLayout({ children }) {
   return (
     <html className="scroll-smooth" lang="en">
       <body
-        className={`${font.className} bg-bright max-w-6xl m-auto px-4 py-4 md:px-8 xl:px-0 scroll-smooth`}
+        className={`${font.className} bg-gray-50 max-w-6xl m-auto px-4 py-4 md:px-8 xl:px-0 scroll-smooth`}
       >
         <Navbar />
         {children}
         <Analytics />
-        <Footer />
       </body>
     </html>
   );

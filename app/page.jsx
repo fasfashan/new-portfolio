@@ -6,6 +6,8 @@ export default function Home() {
     <div className="">
       <Main />
       <Gallery />
+      <hr className="mt-10" />
+      <Footer />
     </div>
   );
 }

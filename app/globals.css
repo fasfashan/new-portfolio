@@ -31,3 +31,11 @@ body {
 .btn-contact:hover {
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.12) inset;
 }
+a:hover .chevron {
+  transform: translateX(-2px);
+  transition: transform 0.3s ease; /* Untuk memberikan efek transisi */
+}
+.card:hover .arrow {
+  transform: translateX(-2px);
+  transition: transform 0.3s ease; /* Untuk memberikan efek transisi */
+}

@@ -1,60 +1,50 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-no-comment-textnodes */
 "use client";
-import { useRef, useEffect } from "react";
+import Figma from "@/public/figma";
+import Framer from "@/public/framer";
+import Wordpress from "@/public/wordpress";
+import Vscode from "@/public/vscode";
 import Link from "next/link";
-import { ArrowDownIcon } from "@radix-ui/react-icons";
+import { ChevronRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 
 export default function Main() {
   return (
-    <main className=" relative gap-5 grid grid-cols-6 mt-10 items-end">
-      <div className="md:col-span-3 col-span-6">
-        <h1 className="xl:text-9xl copy-hero capitalize md:text-7xl text-7xl font-semibold  transition-all tracking-tighter text-warmth  ">
-          User Interface Designer.
-        </h1>
-      </div>
-      <div className="md:col-span-3 space-y-6 col-span-6">
-        <p className="text-neutral-600 leading-relaxed font-medium">
-          In addition to my passion for design, I also enjoy programming,
-          particularly in the front-end domain. This skill enables me to enhance
-          my design projects, bringing a comprehensive approach to my work.
-        </p>
-        <Link
-          className="bg-warmth border-2 border-orange-700 btn-cta font-medium rounded-lg transition-all  items-center gap-2 py-3 flex w-fit px-10"
-          href="#selected-work"
-        >
-          Selected Work <ArrowDownIcon className="animate-bounce" />
-        </Link>
-        <div className="flex items-center gap-4">
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/muhamad-fasha-fadillah/"
+    <main className="mt-10">
+      <div className="max-w-4xl space-y-6">
+        <div className="space-y-4">
+          <h1 className="md:text-7xl copy-hero  text-5xl font-semibold  transition-all tracking-tighter text-black  ">
+            Fasha Fadillah is a User Interface Designer.
+          </h1>
+          <p className="text-neutral-600 text-lg max-w-2xl leading-normal font-subtitle">
+            Proficient in Figma and skilled in Wordpress and Framer, I create
+            dynamic websites with seamless user experiences. Let's work together
+            to elevate your projects!
+          </p>
+        </div>
+
+        <div className="flex gap-2">
+          <Link
+            className="text-black bg-primary hover:shadow-lg btn-selected   transition-all flex items-center gap-1 text-sm px-4 py-2 border font-medium border-neutral-300   rounded-full"
+            href="#selected-works"
           >
-            {" "}
-            <Image
-              className="hover:scale-90 transition-all"
-              height={28}
-              width={28}
-              src="/linkedin.svg"
-            />
+            Selected works
+            <ChevronRightIcon className="chevron transition-transform duration-300 " />
+          </Link>
+          <a
+            className="text-black border border-neutral-300 hover:shadow-inner  btn-selected   transition-all flex items-center gap-1 text-sm px-4 py-2  font-medium   rounded-full"
+            href="mailto:pasapadilah1410@gmail.com"
+          >
+            Contact me
+            <ChevronRightIcon className="chevron transition-transform duration-300 " />
           </a>
-          <a target="_blank" href="https://twitter.com/fasfashan">
-            {" "}
-            <Image
-              className="hover:scale-90 transition-all"
-              height={28}
-              width={28}
-              src="/twitter.svg"
-            />
-          </a>
-          <a target="_blank" href="https://github.com/fasfashan">
-            {" "}
-            <Image
-              className="hover:scale-90 transition-all"
-              height={28}
-              width={28}
-              src="/github.svg"
-            />
-          </a>
+        </div>
+        <div className="flex gap-4">
+          <Figma />
+          <Framer />
+          <Wordpress />
+          <Vscode />
         </div>
       </div>
     </main>
