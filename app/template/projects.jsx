@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import Image from "next/image";
 import { useState } from "react";
@@ -13,6 +14,7 @@ export default function Page({ project_name, project_desc, images }) {
               className="border border-neutral-200 rounded-md"
               key={index}
               src={image}
+              alt={project_name}
               width={2000}
               height={576}
             />
@@ -34,7 +36,7 @@ export default function Page({ project_name, project_desc, images }) {
               project and let's explore how we can collaborate.
             </h2>
             <a
-              className="text-black bg-primary w-full hover:shadow-lg justify-center   transition-all flex items-center gap-2 text-sm px-4 py-2 border font-medium border-neutral-300   rounded-full w-fit"
+              className="text-black bg-primary  hover:shadow-lg justify-center   transition-all flex items-center gap-2 text-sm px-4 py-2 border font-medium border-neutral-300   rounded-full w-fit"
               href="mailto:pasapadilah1410@gmail.com"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
