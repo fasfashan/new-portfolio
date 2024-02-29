@@ -1,33 +1,37 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client";
-import {
-  BackpackIcon,
-  BoxIcon,
-  BoxModelIcon,
-  CalendarIcon,
-  HomeIcon,
-  SunIcon,
-} from "@radix-ui/react-icons";
-import { Tabs } from "flowbite-react";
-import RoundOne from "@/app/components/round-1";
-import Leaderboard from "@/app/components/leaderboard";
-import Schedule from "@/app/components/schedule";
-import { MdDashboard } from "react-icons/md";
-import Image from "next/image";
+
+import Tabs from "@/app/components/tabs";
+export const metadata = {
+  title: "Rebel Project League",
+  description: "Ini bukan sekadar permainan, ini tentang harga diri",
+  twitter: {
+    card: "summary_large_image",
+    url: "https://new-portfolio-ten-silk.vercel.app/",
+    title: "Rebel Project League",
+    description: "Ini bukan sekadar permainan, ini tentang harga diri",
+    image: "/og_image_league.jpg",
+    site: "@fasfashan",
+    creator: "@fasfashan",
+  },
+  openGraph: {
+    title: "Rebel Project League",
+    description: "Ini bukan sekadar permainan, ini tentang harga diri",
+    url: "https://www.muhamadfasha.xyz",
+    siteName: "Fasha Fadillah",
+    images: [
+      {
+        url: "/og_image_league.jpg",
+      },
+    ],
+    locale: "en_ID",
+    type: "website",
+  },
+};
+
 export default function Page() {
   return (
     <>
-      <Tabs className="mt-4" aria-label="Default tabs" style="default">
-        <Tabs.Item active title="standings" icon={HomeIcon}>
-          <Leaderboard />
-        </Tabs.Item>
-        <Tabs.Item title="Schedule" icon={CalendarIcon}>
-          <Schedule />
-        </Tabs.Item>
-        <Tabs.Item title="Prize Pool" icon={BackpackIcon}>
-          <Image src="/Prize-Pool.jpg" width={1440} height={1000} />
-        </Tabs.Item>
-      </Tabs>
+      <Tabs />
     </>
   );
 }
