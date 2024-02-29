@@ -14,13 +14,13 @@ export default function Main() {
     <main className="mt-10">
       <div className="max-w-4xl space-y-6">
         <div className="space-y-4">
-          <h1 className="md:text-7xl copy-hero  text-5xl font-semibold  transition-all tracking-tighter text-black  ">
-            Fasha Fadillah is a User Interface Designer.
+          <h1 className="md:text-7xl copy-hero  text-5xl font-medium  transition-all tracking-tighter text-black  ">
+            Fasha Fadillah is a Freelance Web Designer.
           </h1>
-          <p className="text-neutral-600 text-lg max-w-2xl leading-normal font-subtitle">
-            Proficient in Figma and skilled in Wordpress and Framer, I create
-            dynamic websites with seamless user experiences. Let's work together
-            to elevate your projects!
+          <p className="text-neutral-600 text-lg max-w-2xl leading-normal ">
+            Proficient in Figma and skilled in Wordpress, I create dynamic
+            websites with seamless user experiences. Let's work together to
+            elevate your projects!
           </p>
         </div>
 

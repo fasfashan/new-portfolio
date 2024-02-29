@@ -10,15 +10,17 @@ export default function Card({ link, image, project_type, project_name, alt }) {
       <Link href={link}>
         <Image
           alt={project_name}
-          className="rounded-lg"
+          className="rounded-lg hover:scale-105 transition-all "
           src={image}
           width={440}
           height={336}
         />
-        <div className="space-y-1 mt-3  flex justify-between items-center  rounded-b-lg ">
-          <h3 className="text-black font-medium text-sm ">{project_name}</h3>
-          <div className="p-2 arrow transition-transform duration-300  rounded-full bg-primary">
-            <ArrowRightIcon className="text-black arrow transition-transform duration-300 " />
+        <div className="   items-center  rounded-b-lg ">
+          <div className="flex mt-8 justify-between">
+            <h3 className="text-black font-medium text-sm ">{project_name}</h3>
+            <div className="p-2 arrow transition-transform duration-300  rounded-full bg-primary">
+              <ArrowRightIcon className="text-black arrow transition-transform duration-300 " />
+            </div>
           </div>
         </div>
       </Link>

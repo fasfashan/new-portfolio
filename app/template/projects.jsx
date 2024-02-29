@@ -25,13 +25,11 @@ export default function Page({ project_name, project_desc, images }) {
             <h1 className="text-xl  copy-hero font-medium  transition-all tracking-tight text-black  ">
               {project_name}
             </h1>
-            <p className="text-neutral-600 text-lg font-subtitle ">
-              {project_desc}
-            </p>
+            <p className="text-neutral-600 text-sm  ">{project_desc}</p>
           </div>
           <hr />
           <div className="p-4 shadow-sm border space-y-4 border-neutral-200 rounded-md">
-            <h2 className=" text-base  font-subtitle   text-center text-black ">
+            <h2 className=" text-base     text-center text-black ">
               I'm available for freelance projects —feel free to initiate a
               project and let's explore how we can collaborate.
             </h2>
