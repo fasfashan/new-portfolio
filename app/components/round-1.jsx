@@ -2,21 +2,24 @@ import React, { useState, useEffect } from "react";
 import { PlusIcon, MinusIcon } from "@radix-ui/react-icons";
 function Scoreboard() {
   const [scores, setScores] = useState(() => {
-    const storedScores = localStorage.getItem("scores");
-    return storedScores
-      ? JSON.parse(storedScores)
-      : {
-          Mahruz: 0,
-          Valen: 0,
-          Trisna: 0,
-          Septo: 0,
-          Awal: 0,
-          Fasha: 0,
-          Farhan: 0,
-          Yusron: 0,
-          Saroel: 0,
-          Roki: 0,
-        };
+    if (typeof window !== "undefined" && window.localStorage) {
+      const storedScores = localStorage.getItem("scores");
+      return storedScores ? JSON.parse(storedScores) : {};
+    } else {
+      // Provide default values or an empty object as needed
+      return {
+        Mahruz: 0,
+        Valen: 0,
+        Trisna: 0,
+        Septo: 0,
+        Awal: 0,
+        Fasha: 0,
+        Farhan: 0,
+        Yusron: 0,
+        Saroel: 0,
+        Roki: 0,
+      };
+    }
   });
 
   useEffect(() => {
@@ -56,25 +59,25 @@ function Scoreboard() {
           className="p-4 shadow-sm rounded-lg border border-gray-200"
         >
           <div className="grid text-sm mb-4 md:grid-cols-3 items-center">
-            <span className="font-medium">{player1}</span>
+            <p className="font-medium">{player1}</p>
             <div className="text-sm p-1  bg-cyan-200 gap-4 rounded-md flex justify-center items-center">
-              <div className=" ">{scores[player1]}</div> -
-              <div className=" ">{scores[player2]}</div>
+              <p className=" ">{scores[player1]}</p> -
+              <p className=" ">{scores[player2]}</p>
             </div>
-            <span className="text-right font-medium">{player2}</span>
+            <p className="text-right font-medium">{player2}</p>
             <div className="  items-center flex justify-between items-center  col-span-3">
               <div className="flex gap-2">
                 <button
                   className=" bg-cyan-500 hover:bg-cyan-700 text-white font-bold p-1 rounded"
                   onClick={() => handleScoreChange(player1, 1)}
                 >
-                  <PlusIcon />
+                  +{/* <PlusIcon /> */}
                 </button>
                 <button
                   className=" bg-cyan-500 hover:bg-cyan-700 text-white font-bold p-1 rounded"
                   onClick={() => handleScoreChange(player1, -1)}
                 >
-                  <MinusIcon />
+                  -{/* <MinusIcon /> */}
                 </button>
               </div>
               <div className="flex gap-2">
@@ -82,13 +85,13 @@ function Scoreboard() {
                   className=" bg-cyan-500 hover:bg-cyan-700 text-white font-bold p-1 rounded"
                   onClick={() => handleScoreChange(player2, 1)}
                 >
-                  <PlusIcon />
+                  +{/* <PlusIcon /> */}
                 </button>
                 <button
                   className=" bg-cyan-500 hover:bg-cyan-700 text-white font-bold p-1 rounded"
                   onClick={() => handleScoreChange(player2, -1)}
                 >
-                  <MinusIcon />
+                  -{/* <MinusIcon /> */}
                 </button>
               </div>
             </div>
