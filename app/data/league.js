@@ -1,5 +1,5 @@
 const data = [
-  { name: "Mahruz", point: 0, image: "/mahruz.png", wins: 1 },
+  { name: "Mahruz", point: 0, image: "/mahruz.png", wins: 0 },
   { name: "Valen", point: 0, image: "/vallen.png", wins: 0 },
   { name: "Trisna", point: 2, image: "/trisna.png", wins: 1 },
   { name: "Septo", point: 0, image: "/septo.png", wins: 0 },
