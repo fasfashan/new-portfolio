@@ -4,15 +4,15 @@ import { PlusIcon, MinusIcon } from "@radix-ui/react-icons";
 function Scoreboard() {
   const [scores, setScores] = useState({
     Mahruz: 0,
-    Valen: 0,
-    Trisna: 0,
+    Valen: 1,
+    Trisna: 2,
     Septo: 0,
-    Awal: 0,
-    Fasha: 0,
-    Farhan: 0,
+    Awal: 1,
+    Fasha: 2,
+    Farhan: 2,
     Yusron: 0,
-    Saroel: 0,
-    Roki: 0,
+    Saroel: 2,
+    Roki: 2,
   });
 
   const handleScoreChange = (player, amount) => {
