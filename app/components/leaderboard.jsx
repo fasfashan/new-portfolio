@@ -64,15 +64,26 @@ export default function Page() {
                     "3. 🥉"
                   ) : (
                     <>
-                      {index === 7 || index === 8 || index === 9 ? (
+                      {index === 7 || index === 8 ? (
                         <>
                           {index + 1}.{" "}
-                          <span className="bg-red-600 text-white border border-red-800 text-xs p-1">
-                            Kalah mulu
+                          <span className="bg-yellow-600 rounded-lg text-white border border-red-800 text-xs p-1">
+                            Kalah mulu 🏳️‍🌈🏳️‍⚧️
                           </span>
                         </>
                       ) : (
-                        <span>{index + 1}.</span>
+                        <>
+                          {index === 9 ? (
+                            <>
+                              {index + 1}.{" "}
+                              <span className="bg-yellow-500 rounded-lg text-white border border-red-800 text-xs p-1">
+                                Pensiun aja Mas 🏳️‍🌈🏳️‍⚧️
+                              </span>
+                            </>
+                          ) : (
+                            <span>{index + 1}.</span>
+                          )}
+                        </>
                       )}
                     </>
                   )}
