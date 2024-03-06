@@ -57,7 +57,7 @@ export default function Page() {
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
                   {index === 0 ? (
-                    "1. 🏆"
+                    "1. 🏆 🥶"
                   ) : index === 1 ? (
                     "2. 🥈"
                   ) : index === 2 ? (

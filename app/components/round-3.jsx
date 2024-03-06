@@ -3,15 +3,15 @@ import { PlusIcon, MinusIcon } from "@radix-ui/react-icons";
 
 function Scoreboard() {
   const [scores, setScores] = useState({
-    Mahruz: 0,
+    Mahruz: 2,
     Valen: 0,
-    Trisna: 0,
-    Septo: 0,
+    Trisna: 2,
+    Septo: 1,
     Awal: 0,
-    Fasha: 0,
-    Farhan: 0,
-    Yusron: 0,
-    Saroel: 0,
+    Fasha: 2,
+    Farhan: 1,
+    Yusron: 2,
+    Saroel: 2,
     Roki: 0,
   });
 
@@ -42,8 +42,8 @@ function Scoreboard() {
         <p className="text-gray-600 text-sm font-medium text-center">
           Best of 3
         </p>
-        <div className="bg-yellow-500 w-fit p-1 text-white font-semibold text-xs text-center">
-          Upcoming
+        <div className="bg-green-500 w-fit p-1 text-white font-semibold text-xs text-center">
+          Done
         </div>
       </div>
       {matchups.map(({ player1, player2 }, index) => (
