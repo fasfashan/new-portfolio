@@ -37,11 +37,14 @@ function Scoreboard() {
 
   return (
     <div className="space-y-5">
-      <div>
+      <div className="flex justify-center items-center flex-col space-y-2">
         <h2 className="text-center font-semibold">Day 2</h2>
         <p className="text-gray-600 text-sm font-medium text-center">
           Best of 3
         </p>
+        <div className="bg-green-500 w-fit p-1 text-white font-semibold text-xs text-center">
+          Done
+        </div>
       </div>
       {matchups.map(({ player1, player2 }, index) => (
         <div
