@@ -22,7 +22,12 @@ export default function Page() {
           <Schedule />
         </Tabs.Item>
         <Tabs.Item title="Prize Pool" icon={BackpackIcon}>
-          <Image src="/Prize-Pool.jpg" width={1440} height={1000} />
+          <Image
+            alt="Winner"
+            src="/Prize-Pool.jpg"
+            width={1440}
+            height={1000}
+          />
         </Tabs.Item>
       </Tabs>
     </>
