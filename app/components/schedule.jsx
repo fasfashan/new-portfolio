@@ -5,6 +5,8 @@ import RoundFour from "@/app/components/round-4";
 import RoundFive from "@/app/components/round-5";
 import RoundSix from "@/app/components/round-6";
 import RoundSeven from "@/app/components/round-7";
+import RoundEight from "@/app/components/round-8";
+import RoundNine from "@/app/components/round-9";
 export default function Schedule() {
   return (
     <>
@@ -16,6 +18,8 @@ export default function Schedule() {
         <RoundFive />
         <RoundSix />
         <RoundSeven />
+        <RoundEight />
+        <RoundNine />
       </div>
     </>
   );

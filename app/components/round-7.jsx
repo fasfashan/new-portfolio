@@ -28,11 +28,11 @@ function Scoreboard() {
   };
 
   const matchups = [
-    { player1: "Yusron", player2: "Saroel" },
-    { player1: "Valen", player2: "Trisna" },
-    { player1: "Mahruz", player2: "Roki" },
-    { player1: "Fasha", player2: "Septo" },
-    { player1: "Awal", player2: "Farhan" },
+    { player1: "Roki", player2: "Valen" },
+    { player1: "Trisna", player2: "Yusron" },
+    { player1: "Farhan", player2: "Mahruz" },
+    { player1: "Awal", player2: "Saroel" },
+    { player1: "Septo", player2: "Fasha" },
   ];
 
   return (

@@ -28,17 +28,17 @@ function Scoreboard() {
   };
 
   const matchups = [
-    { player1: "Valen", player2: "Awal" },
-    { player1: "Trisna", player2: "Mahruz" },
-    { player1: "Roki", player2: "Yusron" },
-    { player1: "Farhan", player2: "Fasha" },
-    { player1: "Saroel", player2: "Septo" },
+    { player1: "Yusron", player2: "Awal" },
+    { player1: "Roki", player2: "Trisna" },
+    { player1: "Mahruz", player2: "Fasha" },
+    { player1: "Septo", player2: "Farhan" },
+    { player1: "Saroel", player2: "Valen" },
   ];
 
   return (
     <div className="space-y-5">
       <div className="flex justify-center items-center flex-col space-y-2">
-        <h2 className="text-center font-semibold">Day 5</h2>
+        <h2 className="text-center font-semibold">Day 8</h2>
         <p className="text-gray-600 text-sm font-medium text-center">
           Best of 3
         </p>
