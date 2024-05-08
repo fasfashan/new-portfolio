@@ -49,11 +49,16 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="description" content="Description" />
       </head>
-      <body
-        className={`${font.className} bg-gray-50 max-w-6xl m-auto px-4 py-4 md:px-8 xl:px-0 scroll-smooth`}
-      >
-        <Navbar />
-        {children}
+      <body className={`${font.className} bg-gray-50 `}>
+        <nav className="sticky top-0 backdrop-blur-sm bg-white/30 border-b border-gray-200">
+          <Navbar />
+        </nav>
+        <div
+          className={`${font.className}  max-w-6xl m-auto px-4 py-4  scroll-smooth`}
+        >
+          {children}
+        </div>
+        <div></div>
         <Analytics />
       </body>
     </html>

@@ -20,7 +20,7 @@ export default function Page({ project_name, project_desc, images }) {
             />
           ))}
         </div>
-        <div className="md:col-span-2 col-span-4 rounded-lg space-y-6 h-fit lg:sticky top-5">
+        <div className="md:col-span-2 col-span-4 rounded-lg space-y-6 h-fit lg:sticky top-36">
           <div className="space-y-2">
             <h1 className="text-xl  copy-hero font-medium  transition-all tracking-tight text-black  ">
               {project_name}

@@ -1,11 +1,16 @@
 import Main from "./components/main";
-import Gallery from "./components/gallery";
+import Explorations from "./components/gallery";
 import Footer from "./components/footer";
+import Link from "next/link";
+import Portfolio from "./components/portfolio";
 export default function Home() {
   return (
     <div className="">
       <Main />
-      <Gallery />
+      <div className="mt-20">
+        <Portfolio />
+      </div>
+
       <hr className="mt-10" />
       <Footer />
     </div>

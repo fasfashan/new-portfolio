@@ -6,7 +6,7 @@ export default function Gallery() {
     <>
       <div
         id="selected-work"
-        className="grid  md:grid-cols-3 grid-cols-1 gap-10 mt-20 "
+        className="grid  md:grid-cols-3 grid-cols-1 gap-10  "
       >
         {Data.map((projectData) => (
           <Card
