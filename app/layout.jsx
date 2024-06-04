@@ -4,7 +4,7 @@ import "./globals.css";
 import Head from "next/head";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
-
+import Portfolio from "./components/portfolio";
 const font = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -53,12 +53,9 @@ export default function RootLayout({ children }) {
         <nav className="sticky top-0 backdrop-blur-sm bg-white/30 border-b border-gray-200">
           <Navbar />
         </nav>
-        <div
-          className={`${font.className}  max-w-6xl m-auto px-4 py-4  scroll-smooth`}
-        >
-          {children}
-        </div>
-        <div></div>
+
+        <div className={`${font.className}   scroll-smooth`}>{children}</div>
+
         <Analytics />
       </body>
     </html>
