@@ -88,7 +88,7 @@ export default function LatestWork() {
             <Image
               alt="test"
               className="  transition-all "
-              src="/baic.png"
+              src="/Baic.png"
               width={440}
               height={336}
             />
