@@ -39,3 +39,7 @@ a:hover .chevron {
   transform: translateX(-2px);
   transition: transform 0.3s ease; /* Untuk memberikan efek transisi */
 }
+
+.Typewriter {
+  display: inline !important;
+}

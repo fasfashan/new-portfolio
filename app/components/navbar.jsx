@@ -3,16 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Navbar() {
   return (
-    <div className="flex  max-w-7xl m-auto px-4 py-4  items-center pb-4 justify-between border-black">
-      <Link
-        className="text-black flex items-center gap-2 bg-primary border-neutral-300 border px-4 py-2 font-semibold rounded-full text-sm"
-        href="/"
-      >
-        <HomeIcon />
-        Fasha
+    <div className="flex  max-w-6xl  m-auto px-4 py-4  items-center pb-4 justify-between border-black">
+      <Link className="text-black   items-center  text-white text-2xl" href="/">
+        Fasha ©
       </Link>
       <a
-        className="text-black bg-primary    transition-all flex items-center gap-1 text-sm px-4 py-2 border font-medium border-neutral-300   rounded-full"
+        className="text-white   transition-all flex items-center gap-1 text-sm px-4 py-2 border font-medium border-neutral-300   rounded-lg"
         href="mailto:pasapadilah1410@gmail.com"
       >
         Available for new projects

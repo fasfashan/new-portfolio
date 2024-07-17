@@ -45,12 +45,14 @@ export const metadata = {
 // };
 export default function RootLayout({ children }) {
   return (
-    <html className="scroll-smooth" lang="en">
+    <html className="scroll-smooth " lang="en">
       <head>
         <meta name="description" content="Description" />
       </head>
-      <body className={`${font.className} bg-gray-50 `}>
-        <nav className="sticky top-0 backdrop-blur-sm bg-white/30 border-b border-gray-200">
+      <body
+        className={`${font.className} bg-gradient-to-b from-slate-600 to-gray-900 `}
+      >
+        <nav>
           <Navbar />
         </nav>
 
