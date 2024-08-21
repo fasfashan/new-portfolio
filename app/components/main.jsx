@@ -22,11 +22,11 @@ export default function Main() {
     return () => clearInterval(interval); // Bersihkan interval saat komponen dilepas
   }, []);
   return (
-    <main className="m-auto px-4 gap-8 mt-12 grid grid-cols-12 max-w-6xl">
+    <main className="m-auto px-4 gap-8 mt-12 grid grid-cols-12 md:max-w-6xl">
       <div className="space-y-10 md:col-span-6 col-span-12 ">
         <div className="space-y-4">
           <div className="spacey-1">
-            <h1 className="md:text-5xl text-3xl tracking-tight text-white md:tracking-tighter">
+            <h1 className="md:text-6xl text-3xl tracking-tight text-white md:tracking-tighter">
               Senior UI{" "}
               <span className="text-primary relative">
                 <Typewriter
@@ -60,13 +60,15 @@ export default function Main() {
                 </span>
               </span>
             </h1>
-            <h1 className="md:text-5xl text-3xl text-white md:tracking-tighter">
+            <h1 className="md:text-6xl text-3xl text-white md:tracking-tighter">
               Based in Indonesia.
             </h1>
           </div>
           <p className="text-lg text-neutral-300">
-            My name is Fasha. I can help you design and develop a user friendly
-            website. Let's work together to elevate your projects.
+            Hi! My name is Fasha, a designer who can{" "}
+            <span className="text-primary font-semibold">code</span>. I can help
+            you design and develop a user friendly website. Let's work together
+            to elevate your projects.
           </p>
         </div>
         <a
