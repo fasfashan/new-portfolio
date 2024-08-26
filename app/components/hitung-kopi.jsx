@@ -16,58 +16,40 @@ function App() {
     const parsedTotalPrice = parseFloat(totalPrice.replace(/\./g, "")) || 0;
     const parsedQuantity = parseInt(quantity) || 0;
 
-    if (name && parsedTotalPrice > 0 && parsedQuantity > 0) {
-      setItems([
-        ...items,
-        { name, totalPrice: parsedTotalPrice, quantity: parsedQuantity },
-      ]);
+    setItems([
+      ...items,
+      { name, totalPrice: parsedTotalPrice, quantity: parsedQuantity },
+    ]);
 
-      // Reset form fields
-      setName("");
-      setTotalPrice("");
-      setQuantity("");
-    }
-  };
-
-  const removeItem = (index) => {
-    setItems(items.filter((_, i) => i !== index));
+    // Reset form fields
+    setName("");
+    setTotalPrice("");
+    setQuantity("");
   };
 
   const calculateTotal = () => {
     const subtotal = items.reduce((total, item) => total + item.totalPrice, 0);
-    const itemDiscountValue = parseFloat(itemDiscount.replace(/\./g, "")) || 0;
-    const appDiscountValue = parseFloat(appDiscount.replace(/\./g, "")) || 0;
-    const shippingCostValue = parseFloat(shippingCost.replace(/\./g, "")) || 0;
-
     const total =
-      subtotal - itemDiscountValue - appDiscountValue + shippingCostValue;
+      subtotal -
+      (parseFloat(itemDiscount.replace(/\./g, "")) || 0) -
+      (parseFloat(appDiscount.replace(/\./g, "")) || 0) +
+      (parseFloat(shippingCost.replace(/\./g, "")) || 0);
     return total.toLocaleString("id-ID");
   };
 
   const calculatePricePerItem = () => {
     const subtotal = items.reduce((total, item) => total + item.totalPrice, 0);
-    const itemDiscountValue = parseFloat(itemDiscount.replace(/\./g, "")) || 0;
-    const appDiscountValue = parseFloat(appDiscount.replace(/\./g, "")) || 0;
-    const shippingCostValue = parseFloat(shippingCost.replace(/\./g, "")) || 0;
+    const totalAfterDiscountAndShipping =
+      subtotal -
+      (parseFloat(itemDiscount.replace(/\./g, "")) || 0) -
+      (parseFloat(appDiscount.replace(/\./g, "")) || 0) +
+      (parseFloat(shippingCost.replace(/\./g, "")) || 0);
 
-    // Total diskon
-    const totalDiscount = itemDiscountValue + appDiscountValue;
-
-    // Total yang dikurangi diskon
-    const totalAfterDiscount = subtotal - totalDiscount;
-
-    // Harga per pcs dengan ongkir
     return items.map((item) => {
-      // Diskon proporsional untuk setiap item
-      const discount = (item.totalPrice / subtotal) * totalDiscount;
-      const discountedPrice = item.totalPrice - discount;
-
-      // Ongkir proporsional untuk setiap item
-      const totalPriceWithShipping =
-        discountedPrice + shippingCostValue / items.length;
-      const pricePerItemWithShipping = totalPriceWithShipping / item.quantity;
-
-      return pricePerItemWithShipping.toLocaleString("id-ID", {
+      const pricePerItemBeforeDiscount = item.totalPrice / item.quantity;
+      const pricePerItemAfterDiscount =
+        (totalAfterDiscountAndShipping / subtotal) * pricePerItemBeforeDiscount;
+      return pricePerItemAfterDiscount.toLocaleString("id-ID", {
         maximumFractionDigits: 0,
       });
     });
@@ -87,6 +69,10 @@ function App() {
     setter(formatNumber(e.target.value));
   };
 
+  const removeItem = (indexToRemove) => {
+    setItems(items.filter((_, index) => index !== indexToRemove));
+  };
+
   return (
     <div className="App container mx-auto max-w-2xl m-auto px-4 py-4 p-4">
       <form
@@ -104,7 +90,9 @@ function App() {
           />
         </div>
         <div className="mb-4 space-y-2">
-          <label className="block text-white font-medium">Harga Total:</label>
+          <label className="block text-white font-medium">
+            Harga Paket/Satuan:
+          </label>
           <input
             type="text"
             value={formatNumber(totalPrice)}
@@ -133,14 +121,12 @@ function App() {
         <h2 className="text-xl text-white font-bold mb-4">Daftar Minuman</h2>
         <ul className="text-white mb-6 space-y-3">
           {items.map((item, index) => (
-            <li key={index} className="flex items-center justify-between">
-              <span>
-                🍺 {item.name} - Rp {item.totalPrice.toLocaleString("id-ID")}{" "}
-                {item.quantity} pcs
-              </span>
+            <li key={index} className="flex justify-between items-center">
+              🍺 {item.name} - Rp {item.totalPrice.toLocaleString("id-ID")}{" "}
+              {item.quantity} pcs
               <button
                 onClick={() => removeItem(index)}
-                className="bg-red-500 text-white px-2 py-1 rounded"
+                className="ml-4 bg-red-500 text-white px-2 py-1 rounded"
               >
                 Hapus
               </button>
@@ -171,38 +157,47 @@ function App() {
             value={formatNumber(appDiscount)}
             onChange={handleChange(setAppDiscount)}
             onBlur={handleBlur(setAppDiscount)}
-            className="border rounded w-full p-2"
+            className="border rounded w-full p-2 shadow-inner"
           />
         </div>
         <div className="mb-4 space-y-2">
-          <label className="block font-medium text-white">Ongkir:</label>
+          <label className="block font-medium text-white">Ongkir (Rp):</label>
           <input
             type="text"
             value={formatNumber(shippingCost)}
             onChange={handleChange(setShippingCost)}
             onBlur={handleBlur(setShippingCost)}
-            className="border rounded w-full p-2"
+            className="border rounded w-full p-2 shadow-inner"
           />
         </div>
-        <div className="bg-primary p-4 space-y-4 rounded-md">
+        <div className="bg-primary p-4 space-y-4">
           <p className="font-bold text-2xl">Total: Rp {calculateTotal()}</p>
-          <ul className=" mb-6">
+          <ul className="mb-6">
             {items.map((item, index) => (
               <li key={index}>
                 🍺 {item.name} - Rp {calculatePricePerItem()[index]} per pcs
-                (setelah diskon)
+                (setelah diskon dan ongkir)
               </li>
             ))}
           </ul>
         </div>
       </div>
 
+      <h2 className="text-xl font-bold mb-4">
+        Harga per Pcs Setelah Diskon dan Ongkir
+      </h2>
+      <ul className="list-disc list-inside mb-6">
+        {items.map((item, index) => (
+          <li key={index}>
+            {item.name} - Rp {calculatePricePerItem()[index]} per pcs
+          </li>
+        ))}
+      </ul>
       <Image
         className="m-auto rounded-xl"
         src="/meme-kopi.jpg"
         width={600}
         height={400}
-        alt="DIgmar"
       />
     </div>
   );

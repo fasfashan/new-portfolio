@@ -12,7 +12,6 @@ export default function Footer() {
   return (
     <footer className=" mb- mt-20">
       <div className=" space-y-6 flex max-w-5xl  m-auto justify-between flex-col text-center ">
-        ie ie
         <h2 className=" md:text-5xl text-2xl   md:leading-tight tracking-tighter text-white">
           I'm available for freelance projects —feel free to initiate a project
           and let's explore how we can collaborate.

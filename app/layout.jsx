@@ -49,9 +49,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="description" content="Description" />
       </head>
-      <body
-        className={`${font.className} bg-gradient-to-b from-slate-600 to-gray-900 `}
-      >
+      <body className={`${font.className} bg-slate-600 `}>
         <nav>
           <Navbar />
         </nav>

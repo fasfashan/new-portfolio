@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import {
   RocketIcon,
   BackpackIcon,
@@ -34,7 +35,7 @@ const workImages = [
   },
 ];
 export default function LatestWork() {
-  const [activeTab, setActiveTab] = useState("Design Exploration");
+  const [activeTab, setActiveTab] = useState("Exploration");
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
@@ -46,27 +47,27 @@ export default function LatestWork() {
       >
         <button
           className={`py-2 transition-all px-4  ${
-            activeTab === "Design Exploration"
+            activeTab === "Exploration"
               ? "bg-white rounded-md shadow-md flex items-center gap-2 text-sm"
               : "hover:bg-neutral-100 rounded-md flex items-center gap-2 text-sm"
           }`}
-          onClick={() => handleTabClick("Design Exploration")}
+          onClick={() => handleTabClick("Exploration")}
         >
-          Design Exploration <RocketIcon />
+          Exploration <RocketIcon />
         </button>
         <button
           className={`py-2 transition-all px-4  ${
-            activeTab === "Case Study"
+            activeTab === "Project"
               ? "bg-white rounded-md shadow-md flex items-center gap-2 text-sm"
               : "hover:bg-neutral-100 rounded-md flex items-center gap-2 text-sm"
           }`}
-          onClick={() => handleTabClick("Case Study")}
+          onClick={() => handleTabClick("Project")}
         >
-          Case study <BackpackIcon />
+          Project <BackpackIcon />
         </button>
       </div>
 
-      {activeTab === "Design Exploration" && (
+      {activeTab === "Exploration" && (
         <div className="grid md:gap-10 md:grid-cols-2 mt-8 grid-cols-2">
           {workImages.map(function (data) {
             return (
@@ -82,8 +83,31 @@ export default function LatestWork() {
           })}
         </div>
       )}
-      {activeTab === "Case Study" && (
+      {activeTab === "Project" && (
         <div className="grid md:px-0 px-4 md:gap-8 gap-20  md:grid-cols-3 mt-8 grid-cols-1">
+          <div className="flex flex-col space-y-4">
+            <Image
+              alt="test"
+              className="  transition-all "
+              src="/mdev.jpg"
+              width={440}
+              height={336}
+            />
+            <div className="space-y-4">
+              <h3 className="text-neutral-400 text-sm ">
+                Tools: <span className="text-white">Figma, Wordpress</span>
+              </h3>
+              <div className="space-y-1">
+                <h2 className="font-medium text-lg text-white">Mdev Website</h2>
+              </div>
+            </div>
+            <Link
+              href="/portfolio/mdev"
+              className="text-primary text-sm flex items-center gap-1 hover:text-opacity-50 transition-all "
+            >
+              See project <ChevronRightIcon />{" "}
+            </Link>
+          </div>
           <div className="flex flex-col space-y-4">
             <Image
               alt="test"
@@ -100,46 +124,16 @@ export default function LatestWork() {
                 <h2 className="font-medium text-lg text-white">
                   BAIC Promotion Website
                 </h2>
-                <p className="text-neutral-400  text-sm">
-                  Beijing Automotive International Corporation - well known as
-                  its brand BAIC, founded in 1958, is headquartered in Beijing,
-                  China, and its head office, Beijing Automotive Group Co., Ltd.
-                  is ranked 162th in the Fortune 500.
-                </p>
               </div>
             </div>
-            <span className="text-primary text-sm flex items-center gap-1 hover:text-opacity-50 transition-all hover:cursor-not-allowed">
-              Case study on progress <Pencil1Icon />{" "}
-            </span>
+            <Link
+              href="/portfolio/baic"
+              className="text-primary text-sm flex items-center gap-1 hover:text-opacity-50 transition-all "
+            >
+              See project <ChevronRightIcon />{" "}
+            </Link>
           </div>
-          <div className="flex flex-col space-y-4">
-            <Image
-              alt="test"
-              className="  transition-all "
-              src="/mdev.jpg"
-              width={440}
-              height={336}
-            />
-            <div className="space-y-4">
-              <h3 className="text-neutral-400 text-sm ">
-                Tools: <span className="text-white">Figma, Wordpress</span>
-              </h3>
-              <div className="space-y-1">
-                <h2 className="font-medium text-lg text-white">
-                  Modern Landing Page for MDev
-                </h2>
-                <p className="text-neutral-400 text-sm">
-                  PT Murni Development Indonesia (MDI) is a leading software
-                  development services and solution provider company with over
-                  31 years of industry expertise. Headquartered in Jakarta and
-                  Sydney, MDI serves a global client base.
-                </p>
-              </div>
-            </div>
-            <span className="text-primary text-sm flex items-center gap-1 hover:text-opacity-50 transition-all hover:cursor-not-allowed">
-              Case study on progress <Pencil1Icon />{" "}
-            </span>
-          </div>
+
           <div className="flex flex-col space-y-4">
             <Image
               alt="test"
@@ -155,16 +149,9 @@ export default function LatestWork() {
               <h2 className="font-medium text-lg text-white">
                 Visual Refreshment Delovery
               </h2>
-              <p className="text-neutral-400 text-sm">
-                Delovery is the #1 platform for expressing love and friendship
-                in Indonesia. Delovery has more than 10 years of experience in
-                helping beloved customers, both companies and individuals, to
-                send flower bouquets, parcels/hampers and gifts to 200 cities
-                and districts in Indonesia.
-              </p>
             </div>
             <span className="text-primary text-sm flex items-center gap-1 hover:text-opacity-50 transition-all hover:cursor-not-allowed">
-              Case study on progress <Pencil1Icon />{" "}
+              Project on progress <Pencil1Icon />{" "}
             </span>
           </div>
         </div>
