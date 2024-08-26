@@ -13,7 +13,7 @@ export default function App() {
                 Mdev Website
               </h1>
             </div>
-            <p className="text-lg text-neutral-300">
+            <p className="md:text-lg text-base text-neutral-300">
               PT Murni Development Indonesia (MDI) is a leading software
               development services and solution provider company with over 31
               years of industry expertise. Headquartered in Jakarta and Sydney,
@@ -23,7 +23,7 @@ export default function App() {
           </div>
         </div>
       </main>
-      <div className="flex gap-20 md:max-w-6xl px-4 m-auto mt-10">
+      <div className="flex md:flex-row flex-col gap-8  md:max-w-6xl px-4 m-auto mt-10">
         <div className="flex flex-col   space-y-1">
           <p className="text-neutral-400">Role</p>
           <p className="text-white font-medium">Web Designer</p>
