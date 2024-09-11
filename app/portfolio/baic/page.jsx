@@ -48,7 +48,7 @@ export default function App() {
         </div>
       </div>
       <div className=" md:max-w-6xl px-4 m-auto mt-10 ">
-        <Image src="/baic.webp" width={1140} height={1140}></Image>
+        <Image alt="BAIC" src="/baic.webp" width={1140} height={1140}></Image>
       </div>
       <Footer />
     </>

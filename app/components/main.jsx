@@ -27,7 +27,7 @@ export default function Main() {
         <div className="space-y-4">
           <div className="spacey-1">
             <h1 className="md:text-6xl text-3xl tracking-tight text-white md:tracking-tighter">
-              Senior UI{" "}
+              I'm a UI{" "}
               <span className="text-primary relative">
                 <Typewriter
                   options={{
