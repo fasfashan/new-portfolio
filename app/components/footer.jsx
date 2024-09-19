@@ -13,7 +13,6 @@ const fetcher = (url) => fetch(url).then((r) => r.json());
 export default function Footer() {
   const { data, error } = useSWR("/api/spotify", fetcher, {
     refreshInterval: 5000, // Refresh every 5 seconds
-    shouldRetryOnError: false, // Avoid retrying on error
   });
 
   const currentYear = new Date().getFullYear();
@@ -66,11 +65,11 @@ export default function Footer() {
             <SiSpotify size={40} color={"#1ED760"} />
           )}
         </div>
-
+        {console.log(data)}
         <div className="flex-1 space-y-3">
           <div className="flex justify-between">
             {data?.isPlaying && (
-              <p className=" text-gray-300 text-white text-xs">
+              <p className=" text-gray-300  text-xs">
                 {data?.isPlaying ? "Now Listening" : "Not Listening"}
               </p>
             )}
