@@ -7,26 +7,42 @@ import { SiSpotify } from "react-icons/si";
 import { RiPauseCircleFill } from "react-icons/ri";
 import useSWR from "swr";
 import { ChevronRightIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+
+const fetcher = (url) => fetch(url).then((r) => r.json());
+
 export default function Footer() {
-  const fetcher = (url) => fetch(url).then((r) => r.json());
-  const { data } = useSWR("/api/spotify", fetcher);
+  const { data, error } = useSWR("/api/spotify", fetcher, {
+    refreshInterval: 5000, // Refresh every 5 seconds
+    shouldRetryOnError: false, // Avoid retrying on error
+  });
+
   const currentYear = new Date().getFullYear();
+
+  if (error) {
+    return <p>Failed to load Spotify data.</p>;
+  }
+
+  if (!data) {
+    return <p>Loading...</p>; // Loading state
+  }
+
   return (
-    <footer className=" mb- mt-20">
-      <div className=" space-y-6 flex max-w-5xl  m-auto justify-between flex-col text-center ">
-        <h2 className=" md:text-5xl text-2xl   md:leading-tight tracking-tighter text-white">
+    <footer className="mb-20 mt-20">
+      <div className="space-y-6 flex max-w-5xl m-auto justify-between flex-col text-center">
+        <h2 className="md:text-5xl text-2xl md:leading-tight tracking-tighter text-white">
           I'm available for freelance projects —feel free to initiate a project
           and let's explore how we can collaborate.
         </h2>
         <div className="flex justify-center gap-4">
           <a
             href="mailto:pasapadilah1410@gmail.com"
-            className="bg-primary w-64 hover:bg-white  transition-all rounded-md text-center flex items-center gap-2 justify-center font-semibold py-4 "
+            className="bg-primary w-64 hover:bg-white transition-all rounded-md text-center flex items-center gap-2 justify-center font-semibold py-4"
           >
             Send me an email{" "}
           </a>
         </div>
       </div>
+
       <a
         target="_blank"
         rel="noreferrer"
@@ -44,36 +60,33 @@ export default function Footer() {
               height={20}
               className="w-20 rounded-md shadow-sm"
               src={data?.albumImageUrl}
-              alt={data?.album}
+              alt={data?.album || "Spotify Album"}
             />
           ) : (
             <SiSpotify size={40} color={"#1ED760"} />
           )}
         </div>
 
-        <div className="flex-1 space-y-2">
+        <div className="flex-1 space-y-3">
           <div className="flex justify-between">
-            <p>
-              {data?.isPlaying ? (
-                <RiPauseCircleFill className="text-white" size={24} />
-              ) : (
-                ""
-              )}
-            </p>
-            <p>
-              {data?.isPlaying ? <SiSpotify size={20} color={"#1ED760"} /> : ""}
-            </p>
+            {data?.isPlaying && (
+              <p className=" text-gray-300 text-white text-xs">
+                {data?.isPlaying ? "Now Listening" : "Not Listening"}
+              </p>
+            )}
+            {data?.isPlaying && <SiSpotify size={20} color={"#1ED760"} />}
           </div>
-          <div>
+          <div className="space-y-1">
             <p className="font-bold text-white">
               {data?.isPlaying ? data.title : "Not Listening"}
             </p>
-            <p className="text-xs text-gray-500 mt-2">
+            <p className="text-xs text-gray-300 mt-2">
               {data?.isPlaying ? data.artist : "Spotify"}
             </p>
           </div>
         </div>
       </a>
+
       <p className="text-neutral-300 text-center text-sm">
         ©{currentYear} Fasha Fadillah
       </p>
