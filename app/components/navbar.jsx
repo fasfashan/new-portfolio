@@ -1,19 +1,34 @@
-import { HomeIcon, RocketIcon } from "@radix-ui/react-icons";
+import {
+  HomeIcon,
+  RocketIcon,
+  TwitterLogoIcon,
+  LinkedInLogoIcon,
+} from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
 export default function Navbar() {
   return (
     <div className="flex  max-w-6xl  m-auto px-4 py-4  items-center pb-4 justify-between border-black">
-      <Link className="   items-center  text-white text-2xl" href="/">
+      <Link
+        className="  font-semibold tracking-tight  text-black text-2xl"
+        href="/"
+      >
         Fasha ©
       </Link>
-      <a
-        className="text-white   transition-all flex items-center gap-1 text-sm px-4 py-2 border font-medium border-neutral-300   rounded-lg"
-        href="mailto:pasapadilah1410@gmail.com"
-      >
-        Available for new projects
-        <RocketIcon />
-      </a>
+      <div className="flex gap-4">
+        <a
+          className="text-black  hover:opacity-50 transition-all  "
+          href="https://x.com/fasfashan"
+        >
+          <TwitterLogoIcon width={20} height={20} />
+        </a>
+        <a
+          className="text-black  hover:opacity-50 transition-all  "
+          href="https://www.linkedin.com/in/muhamad-fasha-fadillah/"
+        >
+          <LinkedInLogoIcon width={20} height={20} />
+        </a>
+      </div>
     </div>
   );
 }

@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   color: black;
 }
@@ -42,4 +28,21 @@ a:hover .chevron {
 
 .Typewriter {
   display: inline !important;
+}
+.hero-section {
+  background-color: red;
+}
+
+/* Media query untuk layar mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    background: linear-gradient(
+        180deg,
+        /* Ubah arah gradient dari atas ke bawah */ #00355e 0%,
+        rgba(0, 53, 94, 0.5) 48%,
+        rgba(255, 251, 251, 0) 83%
+      ),
+      url("/BG-Hero(DS).png") lightgray left bottom / cover no-repeat;
+    min-height: 700px;
+  }
 }

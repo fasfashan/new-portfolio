@@ -17,7 +17,7 @@ module.exports = {
         title: "Playfair Display",
       },
       colors: {
-        primary: "#EEFF6C",
+        primary: "#FF6600",
         oranges: "#FF8800",
         dusk: "#0F3538",
         cloud: "#496767",

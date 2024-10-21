@@ -10,16 +10,7 @@ export default function Home() {
   return (
     <>
       <Main />
-      <div className="max-w-6xl m-auto md:px-4 md:py-4 mt-10 ">
-        <LatestWork />
-      </div>
-
-      <div className="mt-20"></div>
-
-      <hr className="mt-10" />
-      <div className="max-w-6xl m-auto px-4 py-4 ">
-        <Footer />
-      </div>
+      <LatestWork />
     </>
   );
 }

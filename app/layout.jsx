@@ -1,11 +1,11 @@
-import { Inter } from "next/font/google";
+import { Arimo } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Head from "next/head";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Portfolio from "./components/portfolio";
-const font = Inter({ subsets: ["latin"] });
+const font = Arimo({ subsets: ["latin"] });
 
 export const metadata = {
   metadataBase: "https://new-portfolio-ten-silk.vercel.app",
@@ -37,19 +37,14 @@ export const metadata = {
     type: "website",
   },
 };
-// export const metadata = {
-//   title: {
-//     template: "%s | Acme",
-//     default: "Acme", // a default is required when creating a template
-//   },
-// };
+
 export default function RootLayout({ children }) {
   return (
     <html className="scroll-smooth " lang="en">
       <head>
         <meta name="description" content="Description" />
       </head>
-      <body className={`${font.className} bg-slate-600 `}>
+      <body className={`${font.className} bg-slate-100 `}>
         <nav>
           <Navbar />
         </nav>
