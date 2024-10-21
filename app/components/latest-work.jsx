@@ -31,7 +31,7 @@ export default function LatestWork() {
               <a
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                href="mailto:pasapadilah1410@gmail.com"
+                href="/"
                 className=" text-white flex items-center w-fit gap-1 hover:text-slate-200 "
               >
                 Case studies in progress
@@ -70,7 +70,7 @@ export default function LatestWork() {
               <a
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                href="mailto:pasapadilah1410@gmail.com"
+                href="/"
                 className=" text-white flex items-center w-fit gap-1 hover:text-slate-200 "
               >
                 Case studies in progress
@@ -109,7 +109,7 @@ export default function LatestWork() {
               <a
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                href="mailto:pasapadilah1410@gmail.com"
+                href="/"
                 className=" text-white flex items-center w-fit gap-1 hover:text-slate-200 "
               >
                 Case studies in progress
