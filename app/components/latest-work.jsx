@@ -23,11 +23,7 @@ export default function LatestWork() {
               <h3 className="text-4xl text-white font-semibold">
                 Smartforex Landing Page
               </h3>
-              <p className="text-slate-400 max-w-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                doloribus dignissimos magnam vero necessitatibus, ducimus quia
-                maiores sunt ratione error.
-              </p>
+
               <a
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
@@ -62,11 +58,7 @@ export default function LatestWork() {
               <h3 className="text-4xl text-white font-semibold">
                 Baic Website
               </h3>
-              <p className="text-slate-400 max-w-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                doloribus dignissimos magnam vero necessitatibus, ducimus quia
-                maiores sunt ratione error.
-              </p>
+
               <a
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
@@ -101,11 +93,7 @@ export default function LatestWork() {
               <h3 className="text-4xl text-white font-semibold">
                 Murni Development Website
               </h3>
-              <p className="text-slate-400 max-w-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                doloribus dignissimos magnam vero necessitatibus, ducimus quia
-                maiores sunt ratione error.
-              </p>
+
               <a
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
