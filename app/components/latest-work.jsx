@@ -5,6 +5,7 @@ import {
   BackpackIcon,
   ChevronRightIcon,
   ValueNoneIcon,
+  LayersIcon,
 } from "@radix-ui/react-icons";
 import Footer from "./footer";
 
@@ -13,7 +14,25 @@ export default function LatestWork() {
   return (
     <>
       <div className=" bg-[url('/gradient-bg.jpg')] bg-cover bg-center bg-no-repeat  m-auto md:px-4 py-32 mt-10 ">
-        <div className="max-w-6xl m-auto px-4">
+        <div className="max-w-6xl m-auto  px-4">
+          <div className="flex flex-col space-y-8">
+            <div className="flex gap-2 items-center">
+              <LayersIcon className="text-white" />
+              <p className="text-white font-medium">Exploration</p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-4xl text-white font-semibold">
+                Deck Template
+              </h3>
+            </div>
+            <img
+              className="w-full rounded-md"
+              src="/deck-template.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div className="max-w-6xl m-auto mt-28 px-4">
           <div className="flex flex-col space-y-8">
             <div className="flex gap-2 items-center">
               <BackpackIcon className="text-white" />
@@ -48,6 +67,7 @@ export default function LatestWork() {
             </div>
           </div>
         </div>
+
         <div className="max-w-6xl m-auto px-4 mt-28">
           <div className="flex flex-col space-y-8">
             <div className="flex gap-2 items-center">
